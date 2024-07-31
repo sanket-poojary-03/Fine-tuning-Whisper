@@ -1,7 +1,7 @@
 from pydub import AudioSegment
 import os
 
-'''Using this function we are creating more data(by splitting the audio file) with audio length of approx ~ 30s as 
+'''This function creates data(by splitting the audio file) with audio length of approx ~ 30s as 
  Whisper feature extractor pads/truncates a batch of audio samples such that all samples have an input length of 30s '''
 def split_audio(audio_file, output_folder, file_index):
     try:
@@ -23,10 +23,7 @@ def split_audio(audio_file, output_folder, file_index):
         print(f"Error splitting {audio_file}: {e}")
         pass
 
-# Path to the folder containing audio files
 audio_folder = "source location"
-
-# Path to the output folder where segments will be saved
 output_folder = "destination location"
 
 audio_files = [os.path.join(audio_folder, file) for file in os.listdir(audio_folder) if file.endswith(".mp3")]
