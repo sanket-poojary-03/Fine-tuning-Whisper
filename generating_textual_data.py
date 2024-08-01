@@ -25,8 +25,8 @@ pipe = pipeline(
     batch_size=16,
     return_timestamps=True,
     torch_dtype=torch_dtype,
-    device=device,
-)
+    device=device)
+
 ''''The below code takes chunks of 100 audio files from the audio folder, sends them to the transcription pipeline to generate corresponding text,
  and appends the results to the metadata.csv file'''
 
@@ -48,11 +48,10 @@ def transcribe_and_append(audio_files, output_csv):
 
     df.to_csv(output_csv, index=False)
     print(f"Transcriptions saved to {output_csv}")
+
+
 audio_folder = "audio folder location"
 output_csv = "metadata.csv"
-
-
-
 chunk_size = 100
 audio_files = [f for f in os.listdir(audio_folder) if f.endswith(".mp3")]
 for i in range(0, len(audio_files), chunk_size):
