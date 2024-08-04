@@ -1,0 +1,11 @@
+pydub
+tqdm
+flash-attn
+librosa
+jiwer
+gradio
+datasets[audio]
+transformers
+accelerate
+optimum
+evaluate
