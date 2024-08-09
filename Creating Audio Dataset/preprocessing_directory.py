@@ -2,8 +2,12 @@ import pandas as pd
 from transformers import AutoTokenizer
 import os
 
-'''The below function is used to check the sequence of the transcribed text and if the text exceeds the max_length,
-deleting those particular files from the dataset'''
+'''
+After splitting the audio dataset and generating the corresponding transcriptions.
+
+The below function is used to check the sequence of the transcribed text and if the text exceeds the max_length,
+deleting those particular files from the dataset
+'''
 def check_sequence_length(df, max_sequence_length=1024):
     for index, row in df.iterrows():
         text = row['transcription']
