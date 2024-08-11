@@ -4,13 +4,9 @@ from transformers import WhisperForConditionalGeneration
 from transformers import WhisperProcessor
 from transformers import WhisperFeatureExtractor
 from transformers import WhisperTokenizer
-dataset = load_dataset("audiofolder", data_dir="/content/drive/MyDrive/audio/data")
 
-
-
+dataset = load_dataset("audiofolder", data_dir="audio/data")
 model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-small")
-
-
 processor = WhisperProcessor.from_pretrained("openai/whisper-small", language="English", task="transcribe")
 
 
