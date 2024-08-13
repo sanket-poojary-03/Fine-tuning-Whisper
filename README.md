@@ -13,3 +13,11 @@ audio_dataset/
 └── data/
 ```
 `metadata.csv` contains the names of the audio files `audio_path` and their corresponding texts `transcription`.
+
+## Model Deployment:
+
+I have pushed the fine-tuned model to Hugging Face under the name sanket003/whisper-darpg.
+
+## Using the Model:
+
+To use the model, run the run_model.py script, which contains a Gradio interface for easy interaction with the model.
