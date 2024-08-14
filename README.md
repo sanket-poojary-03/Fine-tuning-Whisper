@@ -16,7 +16,7 @@ audio_dataset/
 
 ## Model Deployment:
 
-I have pushed the fine-tuned model to Hugging Face under the name sanket003/whisper-darpg.
+I have pushed the fine-tuned model to :hugs:Hugging Face under the name `sanket003/whisper-darpg`.
 
 ## Using the Model:
 
