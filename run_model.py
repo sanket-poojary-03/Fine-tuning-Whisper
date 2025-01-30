@@ -1,11 +1,9 @@
 import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 import gradio as gr
-import time
-
-model_id = "sanket003/whisper-darpg"
+model_id = "sanket003/whisper-for-darpg"
 model = AutoModelForSpeechSeq2Seq.from_pretrained(
-    model_id, torch_dtype=torch.float32, low_cpu_mem_usage=True, use_safetensors=True
+    model_id, torch_dtype=torch.float32, low_cpu_mem_usage=False, use_safetensors=True
 )
 processor = AutoProcessor.from_pretrained(model_id)
 pipe = pipeline(
@@ -13,10 +11,9 @@ pipe = pipeline(
     model=model,
     tokenizer=processor.tokenizer,
     feature_extractor=processor.feature_extractor,
-    max_new_tokens=128,
-    chunk_length_s=30,
-    batch_size=8,
     torch_dtype=torch.float32,
+    generate_kwargs={"language": "english","task":"translate"},
+    return_timestamps= True
 )
 
 def transcribe_audio(audio, file):
@@ -30,7 +27,7 @@ def transcribe_audio(audio, file):
     return result["text"]
 
 iface = gr.Interface(
-    title="Transforming Speech into Text",
+    title="DARPG WHISPER MODEL",
     fn=transcribe_audio,
     inputs=[
         gr.Audio(sources="microphone", type="filepath", label="Record from Microphone"),
