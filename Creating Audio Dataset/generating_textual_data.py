@@ -42,7 +42,7 @@ def transcribe_and_append(audio_files, output_csv):
         result = pipe(audio_path, generate_kwargs={"language": "english"})
 
         transcriptions = result["text"]
-        transcription = " ".join(transcriptions)
+        transcription = "".join(transcriptions)
         df = df.append({"audio_path": audio_path, "transcription": transcription}, ignore_index=True)
 
 
