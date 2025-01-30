@@ -13,14 +13,29 @@ audio_dataset/
 └── data/
 ```
 `metadata.csv` contains the names of the audio files `audio_path` and their corresponding texts `transcription`.
+`data/` folder contains all the audio files.
 
-## Model Deployment:
+## Hackathon Workflow  
 
-I have pushed the fine-tuned model to :hugs:Hugging Face under the name `sanket003/whisper-darpg`.
+These are all the steps we followed during the hackathon.
 
-## Using the Model:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8aad9a03-1a5b-4214-8660-2c0f0aeb5021" alt="Hackathon Workflow">
+</p>
+
+
+
+## Deployment  
+
+We have deployed this model on **Hugging Face Spaces** for easy access and usage. You can try it out here:  
+
+🔗 [Live Demo on Hugging Face Spaces](https://huggingface.co/spaces/sanket003/WHISPER-SPEECH-TO-TEXT-MODEL-FOR-DARPG)
+
+
+
+## Using the Model Locally:
 
 To use the model, run the `run_model.py` script, which contains a Gradio interface for easy interaction with the model.
 
-![image](https://github.com/user-attachments/assets/8aad9a03-1a5b-4214-8660-2c0f0aeb5021)
+
 
