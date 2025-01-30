@@ -21,3 +21,6 @@ I have pushed the fine-tuned model to :hugs:Hugging Face under the name `sanket0
 ## Using the Model:
 
 To use the model, run the `run_model.py` script, which contains a Gradio interface for easy interaction with the model.
+
+![image](https://github.com/user-attachments/assets/8aad9a03-1a5b-4214-8660-2c0f0aeb5021)
+
