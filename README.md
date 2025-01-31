@@ -27,7 +27,7 @@ These are all the steps we followed during the hackathon.
 
 ## Deployment  
 
-I have deployed this model on **Hugging Face Spaces** for easy access and usage. You can try it out here:  
+We have deployed this model on **Hugging Face Spaces** for easy access and usage. You can try it out here:  
 
 🤗 [WHISPER-SPEECH-TO-TEXT-MODEL-FOR-DARPG](https://huggingface.co/spaces/sanket003/WHISPER-SPEECH-TO-TEXT-MODEL-FOR-DARPG)
 
