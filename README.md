@@ -1,8 +1,11 @@
 # Fine tuning Open Source Whisper (Speech-to-Text) Model
 
-For the **DARPG Hackathon**, **The Problem Statement 3** involved evaluating and optimizing an Open Source speech-to-text model to accurately transcribe feedback calls related to citizen grievances into English text.
+For the **DARPG Hackathon 2024**, **The Problem Statement 3** involved evaluating and optimizing an Open Source speech-to-text model to accurately transcribe feedback calls related to citizen grievances into English text.
 
 Since the textual output data was not provided, Whisper LLM was used to generate textual data for each audio dataset. This data was then stored in a `metadata.csv` file, and after preprocessing, it was used to fine-tune the Whisper small LLM.
+
+Here’s a YouTube video explaining our project: [Watch our project explanation on YouTube](https://youtu.be/qPTS3mdLkAY?si=xgYwI-QeYI0aC2Km) 
+
 
 ## Dataset Preparation
 
